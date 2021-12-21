@@ -1,0 +1,57 @@
+.row > .article {
+  margin-top: $default-padding;
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 5.6rem;
+    img,
+    .image {
+      max-width: 38rem;
+      width: 60%;
+
+      &:nth-child(1) {
+        position: relative;
+        z-index: 20;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        right: 0;
+        top: 5.6rem;
+        z-index: 19;
+      }
+    }
+  }
+  .text-container {
+    margin-top: $default-padding;
+  }
+  @include breakpoint(phablet) {
+    margin-top: 0;
+    > article:first-of-type {
+      flex-basis: 70%;
+    }
+    > article:last-of-type {
+      flex-basis: 30%;
+    }
+    .image-container {
+      padding-bottom: 18rem;
+      img,
+      .image {
+        &:nth-child(1) {
+          margin-top: -8rem;
+        }
+        &:nth-child(2) {
+          right: 10rem;
+          top: 6rem;
+        }
+      }
+    }
+    .text-container {
+      padding-bottom: 6rem;
+      h3,
+      .h3 {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

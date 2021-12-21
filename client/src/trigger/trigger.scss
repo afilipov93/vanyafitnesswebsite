@@ -1,0 +1,47 @@
+$image-overlap: 5.9rem;
+
+.row > .hero {
+  background: $grey;
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+
+  h1 {
+    font-size: 3.9rem;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  .image-container {
+    position: relative;
+    p {
+      position: absolute;
+      bottom: 80px;
+      padding: 8px 15px;
+      right: 0px;
+      background: $purple;
+      line-height: 1.5;
+      color: white;
+    }
+    .image,
+    img {
+      width: 100%;
+    }
+  }
+  @include breakpoint(phablet) {
+    margin-top: $image-overlap;
+    padding-top: 0;
+    padding-bottom: 0;
+    .image-container {
+      margin-top: -$image-overlap;
+    }
+    & div:nth-child(1) {
+      flex-basis: 60%;
+    }
+    & div:nth-child(2) {
+      flex-basis: 40%;
+    }
+    .contact-form {
+      padding-right: 45px;
+    }
+  }
+}

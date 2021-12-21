@@ -1,0 +1,105 @@
+.calculator {
+  .container.calc {
+    .outcome-quote {
+      order: 1;
+      text-align: center;
+      margin-top: 6rem;
+      span {
+        color: $pink;
+        display: block;
+      }
+    }
+    .cta-contact {
+      background: $grey;
+      padding: 3rem;
+      margin-top: 6rem;
+    }
+  }
+  .calculate-form {
+    background: $grey;
+    padding: 3.6rem;
+
+    h3 {
+      padding-bottom: 3.6rem;
+      text-align: center;
+    }
+    label {
+      font-size: 1.8rem;
+      margin-right: 1.4rem;
+    }
+    input[type="number"] {
+      padding: 1rem;
+      font-size: 1.8rem;
+      border: 1px solid white;
+      font-weight: bold;
+      font-style: italic;
+      width: calc(100% - 2rem);
+      & :focus,
+      &:focus-visible {
+        border: 1px solid $black;
+        outline: none;
+      }
+    }
+    .input-container {
+      display: block;
+      .input-field {
+        display: block;
+      }
+    }
+  }
+  .table {
+    order: 2;
+    font-size: 1.8rem;
+    margin-top: 6rem;
+    .thead {
+      font-weight: bold;
+    }
+    .tbody,
+    .thead {
+      .trow {
+        border-bottom: 1px solid $grey;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-around;
+        &:nth-of-type(even) {
+          background: $grey;
+        }
+      }
+    }
+  }
+  @include breakpoint(phablet) {
+    .container.calc {
+      justify-content: space-around;
+      align-items: flex-start;
+      margin-top: 6rem;
+    }
+    .calculate-form {
+      padding: 3.6rem;
+      width: 100%;
+      .input-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        .input-field {
+          display: flex;
+          flex-direction: column;
+        }
+
+        input[type="number"] {
+          margin: 0.5rem 4rem 0;
+          margin-left: 0;
+          width: auto;
+          & :focus,
+          &:focus-visible {
+            border: 1px solid $black;
+            outline: none;
+          }
+        }
+      }
+    }
+    .table {
+      width: 30rem;
+      margin-top: 0;
+    }
+  }
+}

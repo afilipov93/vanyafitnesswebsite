@@ -1,0 +1,53 @@
+.action-wrapper {
+	width: 100%;
+	background-color: $purple;
+	transform: translateY(-100%);
+	z-index: 98;
+	position: absolute;
+
+	.action-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		padding: 2rem 4.5rem;
+		h4 {
+			font-size: 1.8rem;
+			a,
+			a:hover {
+				color: white;
+			}
+		}
+		button {
+			background: linear-gradient(rgba(255, 255, 255, 0.2) 0 0);
+			border: 0;
+			padding: 1rem;
+			border-radius: 3px;
+			color: white;
+			& > * {
+				display: block;
+			}
+		}
+	}
+	&.show {
+		animation: slideDown 1s 2s 1 forwards;
+	}
+	&.hide {
+		animation: slideUp 1s 1 forwards;
+	}
+}
+@keyframes slideDown {
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+		transform: translateY(0%);
+	}
+}
+@keyframes slideUp {
+	from {
+		transform: translateY(0%);
+	}
+	to {
+		transform: translateY(-100%);
+	}
+}

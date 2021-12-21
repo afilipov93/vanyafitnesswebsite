@@ -1,0 +1,425 @@
+{
+	"websiteHeadData": {
+		"title": "Michael Post PT",
+		"description": "Michael Post Personal training. Fit worden en fit blijven in Amsterdam. Ik help jou je doelen te halen. Samen stellen we doelen en ik zorg ervoor dat je ze haalt.",
+		"favicon": {
+			"src": "favicon.ico",
+			"sizes": "64x64 32x32 24x24 16x16",
+			"type": "image/x-icon"
+		},
+		"openGraph": {
+			"siteName": "Michael Post PT",
+			"title": "Michael Post PT",
+			"type": "website",
+			"image": "",
+			"url": "https://michaelpost.nl",
+			"description": "Michael Post Personal training. Fit worden en fit blijven in Amsterdam. Ik help jou je doelen te halen. Samen stellen we doelen en ik zorg ervoor dat je ze haalt."
+		}
+	},
+	"websiteContentData": {
+		"logo": {
+			"src": "/SMALL/logo.svg",
+			"alt": "Michael Post PT logo"
+		},
+		"navigation": [
+			{
+				"item": {
+					"name": "Home",
+					"link": "/",
+					"highlight": false
+				}
+			},
+			{
+				"item": {
+					"name": "Over mij",
+					"link": "/over",
+					"highlight": false
+				}
+			},
+			{
+				"item": {
+					"name": "Lessen",
+					"link": "/lessen",
+					"highlight": false
+				}
+			},
+			{
+				"item": {
+					"name": "Contact",
+					"link": "/contact",
+					"highlight": false
+				}
+			},
+			{
+				"item": {
+					"name": "Actie",
+					"link": "/actie",
+					"highlight": true
+				}
+			}
+		],
+		"home": [
+			{
+				"row": {
+					"title": {
+						"type": "h1",
+						"value": "Fit worden, zoals jij fit wilt worden"
+					},
+					"images": [
+						{
+							"image": {
+								"link": "/SMALL/1V0A4454.jpg",
+								"alt": "Foto van Michael",
+								"title": "Michael Post"
+							},
+							"id": "1V0A454"
+						}
+					],
+					"owner": "Michael Post",
+					"hasContactForm": true
+				},
+				"type": "trigger",
+				"col": 2
+			},
+			{
+				"row": {
+					"article": {
+						"title": {
+							"type": "h3",
+							"value": "Bewegen onderdeel maken van je routine"
+						},
+						"text": {
+							"type": "p",
+							"value": "Iedereen kent ze wel, de 8-weken trainingsschema’s die ervoor zorgen dat je in korte tijd veel progressie boekt. Maar vaak komt na die weken van hard werken toch de klad weer in je fitte levensstijl. En dat is zonde. Als personal trainer kijk ik graag naar hoe er op de langere termijn progressie geboekt kan worden en hoe het sporten een onderdeel kan worden van jouw levensstijl. Zoek jij iemand die je goed begeleid en die je vertelt wat je kan doen zodat je sterker, fitter en gezonder blijft? Ik ga graag met je aan de slag!"
+						}
+					},
+					"images": [
+						{
+							"image": {
+								"link": "/SMALL/1V0A4041.jpg",
+								"alt": "Mensen die trainen"
+							},
+							"id": "1V0A4041"
+						},
+						{
+							"image": {
+								"link": "/SMALL/1V0A4211.jpg",
+								"alt": "Mensen die Personal training krijgen."
+							},
+							"id": "1V0A4211"
+						}
+					]
+				},
+				"type": "textBlock",
+				"col": 2
+			},
+			{
+				"row": {
+					"testimonial": [
+						{
+							"item": {
+								"author": "Michael",
+								"profession": "eigenaar",
+								"value": "Traingen met Michael is heel er leuk. Je leert veel en hij heeft goede kennis. Ik had zonder hem niet gestaan waar ik nu sta en daar ben ik heel blij mee."
+							}
+						},
+						{
+							"item": {
+								"author": "Hendrik",
+								"profession": "Ondernemer",
+								"value": "Traingen met Michael is heel er leuk. Je leert veel en hij heeft goede kennis. Ik had zonder hem niet gestaan waar ik nu sta en daar ben ik heel blij mee."
+							}
+						},
+						{
+							"item": {
+								"author": "Emiel",
+								"profession": "Vader van 2 kinderen",
+								"value": "Traingen met Michael is heel er leuk. Je leert veel en hij heeft goede kennis. Ik had zonder hem niet gestaan waar ik nu sta en daar ben ik heel blij mee."
+							}
+						}
+					]
+				},
+				"type": "testimonial",
+				"col": 4
+			},
+			{
+				"row": {
+					"background": true,
+					"article": {
+						"title": {
+							"type": "h2",
+							"value": "Personal training gericht op zelf doen"
+						},
+						"text": {
+							"type": "p",
+							"value": "Sporten is hartstikke leuk, ja echt! Mijn doel is om jou dit in te laten zien en om ervoor te zorgen dat je vol goede moed aan de training begint. We stellen samen per periode een doel en bekijken hoe je dat doel het beste kan behalen. Je zult zien dat door het stellen van doelen het trainen leuk wordt. Het boeken van progressie is uiteindelijk een hele belangrijke motivator die ervoor zorgt dat je het trainen volhoudt."
+						}
+					},
+					"images": [
+						{
+							"image": {
+								"link": "/SMALL/1V0A4524.jpg",
+								"alt": "Mensen die trainen"
+							},
+							"id": "1V0A4524"
+						}
+					],
+					"button": {
+						"type": "primair",
+						"text": "Kom in contact",
+						"link": "/contact"
+					}
+				},
+				"type": "emphasized",
+				"col": 2
+			},
+			{
+				"row": {
+					"article": {
+						"title": {
+							"type": "h2",
+							"value": "Kracht calculator"
+						},
+						"text": {
+							"type": "p",
+							"value": "Bereken je maximale kracht, en stel je doel"
+						}
+					},
+					"button": {
+						"type": "primair",
+						"text": "Bereken",
+						"link": "/max-rep-calculator"
+					},
+					"images": [
+						{
+							"image": {
+								"link": "/SMALL/1V0A3979.jpg",
+								"alt": "Gewicht met stang op de grond"
+							},
+							"id": "1V0A3979"
+						}
+					]
+				},
+				"type": "banner",
+				"col": 1
+			}
+		],
+		"footer": {
+			"col": 3,
+			"socialMedia": {
+				"title": {
+					"type": "h2",
+					"value": "social media"
+				},
+				"socialLinks": [
+					{
+						"social": {
+							"icon": "",
+							"name": "facebook",
+							"link": "https://www.facebook.com/trainen.michaelpost"
+						}
+					},
+					{
+						"social": {
+							"icon": "",
+							"name": "instagram",
+							"link": "https://www.instagram.com/trainen.michaelpost"
+						}
+					}
+				]
+			},
+			"siteInfo": {
+				"copyright": "Michael Post PT",
+				"privacy": {
+					"title": "Privacybeleid",
+					"link": "/privacy"
+				},
+				"terms": {
+					"title": "Algemene voorwaarden",
+					"link": "/algemene-voorwaareden"
+				}
+			}
+		},
+
+		"contact": [
+			{
+				"row": {
+					"personalData": {
+						"phone": "+31 6 39 77 75 55",
+						"email": "trainen@michaelpost.nl",
+						"visitAddress": "Treubweg 16 <br/>1112 BA Diemen"
+					},
+					"images": [
+						{
+							"image": {
+								"link": "/SMALL/1V0A3901.jpg",
+								"alt": "Groep mensen die kijken naar de trainer"
+							},
+							"id": "1V0A3901"
+						}
+					]
+				},
+				"type": "personalData"
+			}
+		],
+
+		"about": [
+			{
+				"row": {
+					"aboutData": {
+						"text": {
+							"value": "Mijn naam is Michael Post. Ik ben gediplomeerd Personal trainer en al jarenlang fanatiek sporter. Zelf ben ik altijd met balsporten bezig geweest en heb krachtrainging gebruikt als onderdeel om mijn sport te verbeteren. Bewegen doe ik de hele dag en ben er van overtuigd dat iedereen er gebaat bij is om meer te bewegen."
+						}
+					},
+					"images": [
+						{
+							"image": {
+								"link": "/SMALL/1V0A4807.jpg",
+								"alt": "Foto van Michael Post"
+							},
+							"id": "1V0A4807"
+						}
+					],
+					"mission": {
+						"text": "Mijn missie is om mensen zover te krijgen dat ze sporten en trainen leuk gaan vinden. Dat het een onderdeel wordt van hun leven en dat ze het zelfs zo fijn gaan vinden dat het niet meer uit hun leven weg te denken is. We gaan samen kijken naar wat jij leuk vindt om te doen. Vervolgens help ik je op weg en begeleid ik je, net zolang tot je mij niet meer nodig hebt. Maar als je liever wel onder begeleiding verder traint kan dat natuurlijk ook!<br><br>Het maakt niet uit wat je leeftijd is. Het is nooit te laat of te vroeg om te beginnen met trainen. Ik geloof dat met de juiste begeleiding sporten voor iedereen leuk kan zijn en iedereen progressie kan boeken!"
+					},
+					"quote": {
+						"text": "Trainen is een aanpassing in je leven. Zolang je het leuk vindt, hou je het vol."
+					},
+					"vision": {
+						"text": "Veel mensen hebben een beeld van een Personal Trainer als een drilsergeant die naast je staat te schreeuwen hoeveel push ups je nog te gaan hebt. Ik geloof niet in de methode. Je Personal Trainer is er om je verder te helpen op een manier die jou verder helpt. Bewegen is voor iedereen anders en allemaal hebben we baat bij een andere, persoonlijke, aanpak.<br><br>Een kortere weg naar je doel, die bestaat naar mijn mening niet. Jij moet tijdens de trainingen het werk doen om je doelen te behalen. Ik zorg ervoor dat de trainingen leuk en uitdagend zijn en begeleid je op de juiste manier. <br><br>Zolang je maar gemotiveerd blijft, dat is uiteindelijk het hoofddoel!"
+					}
+				},
+				"type": "aboutData"
+			}
+		],
+		"lessons": [
+			{
+				"row": {
+					"article": {
+						"title": {
+							"value": "Personal training"
+						},
+						"text": {
+							"value": "Gericht op jou en aangepast naar jouw wensen. Zoek je persoonlijke begeleiding om te beginnen met sporten? Of wil je verder met trainen maar lukt het je niet alleen? Ik bied personal training om je op weg, of om je verder te helpen. Samen gaan we kijken hoe we jou het beste kunnen helpen."
+						},
+						"price": {
+							"value": 50,
+							"subValue": "per les"
+						}
+					},
+					"images": [
+						{
+							"image": {
+								"link": "/SMALL/1V0A4435.jpg",
+								"alt": "Man die traint onder begeleiding"
+							},
+							"id": "1V0A4435"
+						}
+					],
+					"type": "personalTraining"
+				}
+			},
+			{
+				"row": {
+					"article": {
+						"title": {
+							"value": "Duo training"
+						},
+						"text": {
+							"value": "Samen trainen is natuurlijk gezellig en zorgt daarbij voor extra motivatie. Door een gezamenlijk doel te stellen en er samen voor te gaan raak je allebei gemotiveerd en wordt het trainen nog leuker. Trainingen zijn aan te passen naar persoonlijke intensiteit. Op die manier train je samen, maar word je individueel uitgedaagd."
+						},
+						"price": {
+							"value": 25,
+							"subValue": "per persoon, per les"
+						}
+					},
+					"images": [
+						{
+							"image": {
+								"link": "/SMALL/1V0A4718.jpg",
+								"alt": "Man die rent om pionnen"
+							},
+							"id": "1V0A4718"
+						}
+					],
+					"type": "duoTraining"
+				}
+			},
+			{
+				"row": {
+					"article": {
+						"title": {
+							"value": "Small group"
+						},
+						"text": {
+							"value": "In een groep van maximaal 6 mensen daag ik jullie uit om beter te leren bewegen en de lol in het sporten te ontdekken. Met elkaar doen we oefeningen die het bewegen leuker maken. Het doel van deze trainingen is om lekker intensief bezig te zijn met elkaar en om na de training met een goed gevoel naar huis te gaan."
+						},
+						"price": {
+							"value": 20,
+							"subValue": "per persoon, per les"
+						}
+					},
+					"images": [
+						{
+							"image": {
+								"link": "/SMALL/1V0A4349.jpg",
+								"alt": "Man die rent om pionnen"
+							},
+							"id": "1V0A4349"
+						}
+					],
+					"type": "smallGroup"
+				}
+			}
+		],
+		"promotion": [
+			{
+				"row": {
+					"article": [
+						{
+							"text": {
+								"type": "h2",
+								"value": "Wil jij het nieuwe jaar beter beginnen? Pak deze aanbieding."
+							},
+							"class": "h2"
+						}
+					]
+				}
+			},
+			{
+				"row": {
+					"article": [
+						{
+							"text": {
+								"type": "blockquote",
+								"value": "Nu 4 weken 2x in de week Personal Training voor € 70,-"
+							},
+							"class": "promotion"
+						}
+					]
+				}
+			},
+			{
+				"row": {
+					"article": [
+						{
+							"text": {
+								"type": "p",
+								"value": "Wil jij het volgend jaar ook graag anders doen maar weet je niet goed hoe? Kom trainen met mij en ik ga volle bak met je aan de slag om het bewegen leuker, makkelijker en beter te maken."
+							},
+							"class": "text"
+						},
+						{
+							"text": {
+								"type": "p",
+								"value": "Samen met mij gaan we jouw doel stellen en kijken wat daar voor nodig is om dat doel te halen."
+							},
+							"class": "text"
+						}
+					]
+				}
+			}
+		]
+	}
+}

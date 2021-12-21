@@ -1,0 +1,59 @@
+.contact-form {
+  .row {
+    text-align: center;
+    .input {
+      border: 1px solid white;
+      font-family: "Roboto", sans-serif;
+      margin: 6px 0;
+      padding: 10px;
+      font-size: 1.8rem;
+      width: calc(100% - 22px);
+      &:focus-visible,
+      &:focus,
+      &:active {
+        border: 1px solid $black;
+        outline: none;
+      }
+      &.error {
+        border: 1px solid $red;
+        color: $red;
+        background: lighten($red, 75%);
+      }
+    }
+    .button {
+      border: 0;
+      margin: 1.8rem 0;
+      margin-bottom: 2.8rem;
+      width: 100%;
+    }
+    p {
+      text-align: left;
+    }
+    .errorMessage {
+      color: $red;
+      font-weight: 700;
+      display: block;
+      font-size: 1.4rem;
+      padding: 0;
+    }
+  }
+  @include breakpoint(phablet) {
+    .row {
+      display: flex;
+      justify-content: space-between;
+      .input {
+        width: calc(50% - 12px);
+        + .input {
+          margin-left: 12px;
+        }
+      }
+      textarea.input {
+        width: 100%;
+        resize: none;
+      }
+      .button {
+        width: auto;
+      }
+    }
+  }
+}

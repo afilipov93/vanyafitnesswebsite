@@ -1,0 +1,29 @@
+.banner {
+  width: 100%;
+  article {
+    width: calc(100% - 80px);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+    padding: 126px 40px;
+    .text-container {
+      position: relative;
+      z-index: 20;
+      text-align: center;
+      h2,
+      p {
+        color: white;
+      }
+      h2 {
+        font-size: 3.6rem;
+      }
+    }
+  }
+  @include breakpoint(phablet) {
+    article {
+      width: calc(100% - 120px);
+      padding: 140px 60px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+$width: 200px;
+
+.logo {
+  max-width: $width;
+  display: flex;
+  align-items: center;
+  img {
+    width: $width;
+    filter: invert(100%);
+    
+    @include breakpoint(phablet) {
+      filter: invert(0%);
+    }
+  }
+}

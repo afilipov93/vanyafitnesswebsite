@@ -1,0 +1,16 @@
+header {
+	background: $black;
+	padding: 10px $default-margin;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 99;
+	position: relative;
+
+	@include breakpoint(phablet) {
+		background-color: #fff;
+		padding-bottom: $default-padding;
+		@include horizontal-padding;
+		padding-top: $default-padding;
+	}
+}

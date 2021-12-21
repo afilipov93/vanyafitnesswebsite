@@ -1,0 +1,33 @@
+{
+	"name": "package",
+	"version": "1.0.0",
+	"description": "website Michael Post PT",
+	"main": "server.js",
+	"scripts": {
+		"test": "test",
+		"start": "node server.js",
+		"heroku-postbuild": "cd client && npm install && npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mchlpst/personaltrainer.git"
+	},
+	"keywords": [
+		"React",
+		"Express",
+		"Personal",
+		"trainer"
+	],
+	"author": "Michael Post",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/mchlpst/personaltrainer/issues"
+	},
+	"homepage": "https://github.com/mchlpst/personaltrainer#readme",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"heroku-ssl-redirect": "^0.1.1"
+	}
+}

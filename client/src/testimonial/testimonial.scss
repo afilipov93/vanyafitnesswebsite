@@ -1,0 +1,24 @@
+.testimonial {
+  margin-top: $default-padding;
+  margin-bottom: $default-padding;
+  .single-testimonial {
+    margin: 2rem 0;
+    flex-basis: 31%;
+
+    .container {
+      padding: $default-margin;
+      display: block;
+      p {
+        margin-bottom: 1.6rem;
+      }
+      p:nth-child(2) {
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+  }
+  @include breakpoint(phablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
