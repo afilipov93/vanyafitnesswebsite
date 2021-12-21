@@ -16,7 +16,7 @@ class Header extends React.Component {
 
 		const { cookies } = props;
 		this.state = {
-			showBanner: cookies.get('showBanner') || true,
+			showBanner: cookies.get('showBanner') || true, //set to false to hide it.
 		};
 	}
 	render() {
