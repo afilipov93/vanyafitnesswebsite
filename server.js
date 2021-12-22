@@ -5,6 +5,7 @@ const app = express();
 const port = process.env.PORT || 3001;
 const content = require('./websiteContent.json');
 const path = require('path');
+const nodemailer = require('nodemailer');
 
 app.use(sslRedirect());
 app.use(express.urlencoded({ extended: true }));
@@ -17,7 +18,10 @@ app.get('/data', (req, res) => {
 	res.json(content);
 });
 
-app.get('*', (req, res) => {
+// POST email
+app.use('/sendemail', require('./routes/sendEmail'));
+
+app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 

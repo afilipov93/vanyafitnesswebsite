@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import emailjs from 'emailjs-com';
+import axios from 'axios';
 
 const PromotionForm = (props) => {
 	const [feedback, setFeedback] = useState('Plan mijn afspraak');
@@ -11,29 +11,27 @@ const PromotionForm = (props) => {
 		handleSubmit,
 	} = useForm();
 
-	const onSubmitHandler = (e) => {
-		e.preventDefault();
+	const onSubmitHandler = async (data, event) => {
 		setFeedback('Verzenden...');
-		emailjs
-			.sendForm(
-				'service_1ezv6al',
-				'template_ygsbadk',
-				e.target,
-				'user_UgwxCI8vkvoM4sC0kXBNG'
-			)
-			.then(
-				function (response) {
-					reset();
-					setFeedback('Verzonden!!');
-				},
-				function (error) {
-					console.log(error);
-					setFeedback('Plan mijn afspraak');
-				}
-			);
+		event.preventDefault();
+		console.log(data);
+
+		axios
+			.post('/sendemail', { data })
+			.then(function (response) {
+				reset();
+				setFeedback('Verzonden!!');
+			})
+			.catch(function (error) {
+				console.log(error);
+				setFeedback('Plan mijn afspraak');
+			});
+	};
+	const onError = () => {
+		console.log('Fout!');
 	};
 	return (
-		<form onSubmit={(e) => handleSubmit(onSubmitHandler(e))}>
+		<form onSubmit={handleSubmit(onSubmitHandler, onError)}>
 			<h3>{props.title}</h3>
 			<label>Naam</label>
 			<input

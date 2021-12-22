@@ -4,7 +4,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { useCookies } from 'react-cookie';
 
 const ActionBanner = (props) => {
-	const [cookies, setCookie] = useCookies(['disableBanner']);
+	const [cookie, setCookie] = useCookies(['disableBanner']);
 	const useToggle = (initialState) => {
 		const [isToggled, setIsToggled] = useState(initialState);
 
