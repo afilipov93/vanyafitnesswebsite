@@ -19,7 +19,7 @@ app.get('/data', (req, res) => {
 });
 
 // POST email
-app.use('/sendemail', require('./routes/sendEmail'));
+app.use('/sendemailpromotion', require('./routes/sendEmailPromotion'));
 
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname + '/client/build/index.html'));

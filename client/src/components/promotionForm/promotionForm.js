@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
@@ -17,7 +17,7 @@ const PromotionForm = (props) => {
 		console.log(data);
 
 		axios
-			.post('/sendemail', { data })
+			.post('/sendemailpromotion', { data })
 			.then(function (response) {
 				reset();
 				setFeedback('Verzonden!!');
@@ -27,8 +27,8 @@ const PromotionForm = (props) => {
 				setFeedback('Plan mijn afspraak');
 			});
 	};
-	const onError = () => {
-		console.log('Fout!');
+	const onError = (err) => {
+		console.log(err);
 	};
 	return (
 		<form onSubmit={handleSubmit(onSubmitHandler, onError)}>
