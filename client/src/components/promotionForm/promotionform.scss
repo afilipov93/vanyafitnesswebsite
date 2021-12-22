@@ -8,7 +8,7 @@
 
 	form.promotion {
 		padding: 2rem;
-		min-width: 30rem;
+		width: 100%;
 		h3 {
 			text-align: center;
 			margin-bottom: 2rem;
@@ -50,13 +50,19 @@
 			background-color: $bmw-blue;
 		}
 	}
-	.image-container {
-		width: 100%;
-		div {
-			display: block;
+
+	@include breakpoint(phablet) {
+		form.promotion {
+			max-width: 35rem;
+		}
+		.image-container {
 			width: 100%;
-			height: 100%;
-			background-position: top top;
+			div {
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-position: top top;
+			}
 		}
 	}
 }
