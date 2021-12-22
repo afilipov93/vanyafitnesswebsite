@@ -20,23 +20,37 @@ transporter.verify((err, succes) => {
 });
 
 sendEmailRouter.post('/', (req, res, next) => {
-	const message = {
+	const messageOwner = {
 		from: 'Michael Post PT <trainen@michaelpost.nl>',
 		to: 'michaelpost@chello.nl',
 		subject: 'Nieuwe aanmelding promotie',
 		html: `
-		<h1>Nieuwe aanmelding!</h1>
+		<h1>Nieuwe aanmelding via de promotie!</h1>
 		<p>Naam: ${req.body.data.name}</p>
 		<p>Telefoon: ${req.body.data.phone}</p>
 		<p>E-mail: ${req.body.data.email}</p>
 		`,
 	};
-	transporter.sendMail(message, function (err, data) {
-		if (err) {
-			res.sendStatus(err.status || 500);
-		} else {
-			res.sendStatus(200);
-		}
-	});
+	const messageSender = {
+		from: 'Michael Post PT <trainen@michaelpost.nl>',
+		to: req.body.data.email,
+		subject: 'Bedankt voor je aanmelding',
+		html: `
+		<h1>Aanmelding gelukt!</h1>
+		<p>Leuk dat je met mij in contact wil komen. Ik neem zo snel mogelijk contact met je op om een afspraak te plannen. Dit zijn de gegevens die naar mij toe hebt gestuurd:</p>
+		<p>Naam: ${req.body.data.name}</p>
+		<p>Telefoon: ${req.body.data.phone}</p>
+		<p>E-mail: ${req.body.data.email}</p>
+		<p>Klopt er iets niet? Vul dan het formulier op de website nog een keer in.</p>
+		<p>Met sportieve groet,<br>Michael Post</p>
+		`,
+	};
+
+	Promise.all([
+		transporter.sendMail(messageOwner),
+		transporter.sendMail(messageSender),
+	])
+		.then(res.sendStatus(200))
+		.catch((err) => res.sendStatus(err.status || 500));
 });
 module.exports = sendEmailRouter;
