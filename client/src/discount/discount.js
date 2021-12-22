@@ -30,8 +30,14 @@ const Discount = (props) => {
 				</div>
 			))}
 			<div className="row">
-				<div className="container col">
-					<PromotionForm title="Meld je aan!" />
+				<div className="container col center" style={{ marginTop: '4rem' }}>
+					<PromotionForm
+						// c={props.data.contact.find(function (d) {
+						// 	return d.type === 'personalData';
+						// })}
+						c={props.data.contact[0].row.images[0].image.link}
+						title="Meld je aan!"
+					/>
 				</div>
 			</div>
 		</main>
