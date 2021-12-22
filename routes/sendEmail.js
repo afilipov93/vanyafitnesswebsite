@@ -1,5 +1,5 @@
 const express = require('express');
-const sendEmailPromotionRouter = express.Router();
+const sendEmailRouter = express.Router();
 const nodemailer = require('nodemailer');
 
 // Connect to Email server
@@ -19,16 +19,17 @@ transporter.verify((err, succes) => {
 		: console.log(`Send messages: ${succes}`);
 });
 
-sendEmailPromotionRouter.post('/', (req, res, next) => {
+sendEmailRouter.post('/', (req, res, next) => {
 	const messageOwner = {
 		from: 'Michael Post PT <trainen@michaelpost.nl>',
 		to: 'trainen@michaelpost.nl',
-		subject: 'Nieuwe aanmelding promotie',
+		subject: 'Contact formulier ingevuld',
 		html: `
-		<h1>Nieuwe aanmelding via de promotie!</h1>
+		<h1>Nieuwe aanmelding via het contactformulier</h1>
 		<p>Naam: ${req.body.data.name}</p>
 		<p>Telefoon: ${req.body.data.phone}</p>
 		<p>E-mail: ${req.body.data.email}</p>
+    <p>Bericht: <i>${req.body.data.message}</i></p>
 		`,
 	};
 	const messageSender = {
@@ -41,6 +42,7 @@ sendEmailPromotionRouter.post('/', (req, res, next) => {
 		<p>Naam: ${req.body.data.name}</p>
 		<p>Telefoon: ${req.body.data.phone}</p>
 		<p>E-mail: ${req.body.data.email}</p>
+    <p>Bericht: <i>${req.body.data.message}</i></p>
 		<p>Klopt er iets niet? Vul dan het formulier op de website nog een keer in.</p>
 		<p>Met sportieve groet,<br>Michael Post</p>
 		`,
@@ -53,4 +55,4 @@ sendEmailPromotionRouter.post('/', (req, res, next) => {
 		.then(res.sendStatus(200))
 		.catch((err) => res.sendStatus(err.status || 500));
 });
-module.exports = sendEmailPromotionRouter;
+module.exports = sendEmailRouter;

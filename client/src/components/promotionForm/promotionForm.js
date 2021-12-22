@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import Img from '../img';
 
 const PromotionForm = (props) => {
 	const [feedback, setFeedback] = useState('Plan mijn afspraak');
@@ -16,7 +15,6 @@ const PromotionForm = (props) => {
 	const onSubmitHandler = async (data, event) => {
 		setFeedback('Verzenden...');
 		event.preventDefault();
-		console.log(data);
 
 		axios
 			.post('/sendemailpromotion', { data })
@@ -29,9 +27,7 @@ const PromotionForm = (props) => {
 				setFeedback('Plan mijn afspraak');
 			});
 	};
-	const onError = (err) => {
-		console.log(err);
-	};
+	const onError = (err) => {};
 	return (
 		<section className="promotion-form-container">
 			<form

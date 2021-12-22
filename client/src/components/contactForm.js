@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import emailjs from 'emailjs-com';
+import axios from 'axios';
 
 const ContactForm = ({ title }) => {
 	const {
@@ -9,33 +9,31 @@ const ContactForm = ({ title }) => {
 		reset,
 		handleSubmit,
 	} = useForm();
+	const [feedback, setFeedback] = useState('Verstuur');
 
-	function onSubmit(e) {
-		e.preventDefault();
+	const onSubmitHandler = async (data, event) => {
+		setFeedback('Verzenden...');
+		event.preventDefault();
 
-		emailjs
-			.sendForm(
-				'service_1ezv6al',
-				'template_567p95z',
-				e.target,
-				'user_UgwxCI8vkvoM4sC0kXBNG'
-			)
-			.then(
-				function (response) {
-					reset();
-				},
-				function (error) {
-					console.log(error);
-				}
-			);
-	}
+		axios
+			.post('/sendEmail', { data })
+			.then(function (respone) {
+				reset();
+				setFeedback('Verzonden!!');
+			})
+			.catch(function (error) {
+				console.log(error);
+				setFeedback('Verstuur');
+			});
+	};
+	const onError = (err) => {};
 
 	return (
 		<div>
 			<form
 				id="contact-form"
 				className="contact-form"
-				onSubmit={(e) => handleSubmit(onSubmit(e))}
+				onSubmit={handleSubmit(onSubmitHandler, onError)}
 			>
 				<div className="row">
 					<p>{title}</p>
@@ -43,10 +41,17 @@ const ContactForm = ({ title }) => {
 				<div className="row">
 					<input
 						type="text"
-						name="fullName"
-						className={errors.fullName ? 'input error' : 'input'}
+						name="name"
+						className={errors.name ? 'input error' : 'input'}
 						placeholder="Je naam"
-						{...register('fullName', { required: true, minLength: 3 })}
+						{...register('name', { required: true, minLength: 3 })}
+					/>
+					<input
+						type="tel"
+						name="phone"
+						className={errors.phone ? 'input error' : 'input'}
+						placeholder="Je telefoonnummer"
+						{...register('phone', { required: true, minLength: 3 })}
 					/>
 					<input
 						type="email"
@@ -80,7 +85,7 @@ const ContactForm = ({ title }) => {
 				)}
 				<div className="row">
 					<button className="button secondair" type="submit">
-						Verstuur
+						{feedback}
 					</button>
 				</div>
 			</form>
