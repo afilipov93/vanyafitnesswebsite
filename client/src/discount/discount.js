@@ -7,7 +7,7 @@ const Discount = (props) => {
 
 	return (
 		<main className="promotion">
-			<Heading title="Kennismakingskorting" />
+			<Heading title="kennismaking" />
 			{c.map((rows) => (
 				<div className="row" key={Math.random()}>
 					<section className="container col">
