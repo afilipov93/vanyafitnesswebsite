@@ -29,7 +29,11 @@ const Discount = (props) => {
 					</section>
 				</div>
 			))}
-			<PromotionForm title="Meld je aan!" />
+			<div className="row">
+				<div className="container col">
+					<PromotionForm title="Meld je aan!" />
+				</div>
+			</div>
 		</main>
 	);
 };

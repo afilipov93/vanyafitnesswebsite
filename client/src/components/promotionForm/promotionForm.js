@@ -31,34 +31,58 @@ const PromotionForm = (props) => {
 		console.log(err);
 	};
 	return (
-		<form onSubmit={handleSubmit(onSubmitHandler, onError)}>
+		<form
+			className="promotion"
+			onSubmit={handleSubmit(onSubmitHandler, onError)}
+		>
 			<h3>{props.title}</h3>
-			<label>Naam</label>
-			<input
-				name="name"
-				type="text"
-				className={errors.name ? 'input error' : 'input'}
-				{...register('name', { required: true, minLength: 3 })}
-			/>
-			<label>Telefoonnummer</label>
-			<input
-				name="phone"
-				type="tel"
-				className={errors.phone ? 'input error' : 'input'}
-				{...register('phone', { required: true })}
-			/>
-			<label>E-mail</label>
-			<input
-				name="email"
-				type="email"
-				className={errors.email ? 'input error' : 'input'}
-				{...register('email', {
-					required: true,
-					pattern:
-						/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-				})}
-			/>
-			<button type="submit">{feedback}</button>
+			<div className="form-body">
+				<section className="form-field">
+					<label>Naam</label>
+					<input
+						name="name"
+						type="text"
+						className={errors.name ? 'input error' : 'input'}
+						{...register('name', { required: true, minLength: 3 })}
+					/>
+					{errors.name && (
+						<span className="error">Dit veld is niet goed ingevuld</span>
+					)}
+				</section>
+				<section className="form-field">
+					<label>Telefoonnummer</label>
+					<input
+						name="phone"
+						type="tel"
+						className={errors.phone ? 'input error' : 'input'}
+						{...register('phone', { required: true })}
+					/>
+					{errors.phone && (
+						<span className="error">Dit veld is niet goed ingevuld</span>
+					)}
+				</section>
+				<section className="form-field">
+					<label>E-mail</label>
+					<input
+						name="email"
+						type="email"
+						className={errors.email ? 'input error' : 'input'}
+						{...register('email', {
+							required: true,
+							pattern:
+								/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+						})}
+					/>
+					{errors.email && (
+						<span className="error">Dit veld is niet goed ingevuld</span>
+					)}
+				</section>
+			</div>
+			<section className="submit-container">
+				<button type="submit" className="button">
+					{feedback}
+				</button>
+			</section>
 		</form>
 	);
 };

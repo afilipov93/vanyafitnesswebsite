@@ -1,0 +1,46 @@
+form.promotion {
+	margin: 2rem auto;
+	padding: 2rem;
+	background-color: $grey;
+	border: 3px solid $pink;
+	h3 {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.form-body {
+		.form-field {
+			margin: 0 0 2rem;
+		}
+		.form-field * {
+			display: block;
+		}
+		label {
+			font-size: 1.8rem;
+			font-style: italic;
+			margin-bottom: 0.5rem;
+		}
+		input {
+			font-size: 1.8rem;
+			border-radius: 0;
+			border: none;
+			padding: 1rem;
+			width: calc(100% - 2rem);
+			&.error {
+				border: 2px solid $red;
+			}
+			&:focus-visible,
+			&:active,
+			&:focus {
+				outline: none;
+			}
+		}
+		.error {
+			color: $red;
+			font-size: 1.3rem;
+			margin-top: 0.3rem;
+		}
+	}
+	button {
+		background-color: $bmw-blue;
+	}
+}
