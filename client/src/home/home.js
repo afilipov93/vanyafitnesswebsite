@@ -1,7 +1,7 @@
 import React from 'react';
 import Trigger from '../trigger/trigger';
 import Banner from '../banner/banner';
-import Testimonial from '../testimonial/testimonial';
+// import Testimonial from '../testimonial/testimonial';
 import TextBlock from '../textBlock/textBlock';
 import Emphasized from '../emphasized/emphasized';
 
