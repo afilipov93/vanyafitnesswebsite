@@ -32,6 +32,7 @@
 						font-weight: 700;
 					}
 					&.highlight {
+						display: none; //added for the action page to be not reachable
 						background: $bmw-blue;
 						padding: 1rem 2.5rem;
 						border-radius: 3px;
