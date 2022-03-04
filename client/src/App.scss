@@ -5,8 +5,10 @@
 // custom fonts
 @font-face {
 	font-family: 'Quick Kiss';
-	src: url('./font/Quick-Kiss.ttf'), url('./font/Quick-Kiss.woff2'),
-		url('./font/Quick-Kiss.otf'), url('./font/Quick-Kiss.woff');
+	src: url('./font/Quick-Kiss.ttf') format('truetype'),
+		url('./font/Quick-Kiss.woff2') format('woff'), url('./font/Quick-Kiss.otf'),
+		url('./font/Quick-Kiss.woff') format('woff'),
+		url('./font/Quick-Kiss.svg#QuickKiss') format(svg);
 }
 
 * {
