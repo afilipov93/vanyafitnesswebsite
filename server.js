@@ -10,7 +10,7 @@ const nodemailer = require('nodemailer');
 app.use(sslRedirect());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(__dirname + '/client/build'));
+
 app.use(cors());
 
 // GET website data
@@ -23,6 +23,8 @@ app.use('/sendemailpromotion', require('./routes/sendEmailPromotion'));
 
 // POST email contact
 app.use('/sendemail', require('./routes/sendEmail'));
+
+app.use('/static/', express.static(path.join(__dirname + '/client/public')));
 
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname + '/client/build/index.html'));

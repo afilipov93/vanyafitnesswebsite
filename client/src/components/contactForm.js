@@ -84,7 +84,7 @@ const ContactForm = ({ title }) => {
 					</div>
 				)}
 				<div className="row">
-					<button className="button secondair" type="submit">
+					<button className="button primair" type="submit">
 						{feedback}
 					</button>
 				</div>

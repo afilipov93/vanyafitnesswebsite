@@ -1,15 +1,24 @@
-$width: 200px;
+// $width: 300px;
 
-.logo {
-  max-width: $width;
-  display: flex;
-  align-items: center;
-  img {
-    width: $width;
-    filter: invert(100%);
-    
-    @include breakpoint(phablet) {
-      filter: invert(0%);
-    }
-  }
+html body .logo {
+	h3 {
+		font-family: 'Quick Kiss Personal Use';
+		font-size: 3rem;
+		color: white;
+		@include breakpoint(phablet) {
+			color: $black;
+			font-size: 5rem;
+		}
+	}
+	// max-width: $width;
+	// display: flex;
+	// align-items: center;
+	// img {
+	// 	width: $width;
+	// 	filter: invert(100%);
+
+	// 	@include breakpoint(phablet) {
+	// 		filter: invert(0%);
+	// 	}
+	// }
 }

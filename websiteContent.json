@@ -18,7 +18,8 @@
 	},
 	"websiteContentData": {
 		"logo": {
-			"src": "/SMALL/Logo.svg",
+			"title": "Michael Post PT",
+			"src": "/logo-black.svg",
 			"alt": "Michael Post PT logo"
 		},
 		"navigation": [

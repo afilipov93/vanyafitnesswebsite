@@ -2,6 +2,22 @@
 @import 'scss/mixins.scss';
 @import 'scss/libary.scss';
 
+// custom fonts
+@font-face {
+	font-family: 'Quick Kiss Personal Use';
+	src: url('//db.onlinewebfonts.com/t/9a6ca307808e5b7ff1efe983307e39d0.eot');
+	src: url('//db.onlinewebfonts.com/t/9a6ca307808e5b7ff1efe983307e39d0.eot?#iefix')
+			format('embedded-opentype'),
+		url('//db.onlinewebfonts.com/t/9a6ca307808e5b7ff1efe983307e39d0.woff2')
+			format('woff2'),
+		url('//db.onlinewebfonts.com/t/9a6ca307808e5b7ff1efe983307e39d0.woff')
+			format('woff'),
+		url('//db.onlinewebfonts.com/t/9a6ca307808e5b7ff1efe983307e39d0.ttf')
+			format('truetype'),
+		url('//db.onlinewebfonts.com/t/9a6ca307808e5b7ff1efe983307e39d0.svg#Quick Kiss Personal Use')
+			format('svg');
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -96,7 +112,7 @@ html {
 		.button {
 			margin-top: 2.3rem;
 			display: inline-block;
-			background: $purple;
+			background: $bmw-blue;
 			font-family: 'Roboto Condensed', sans-serif;
 			text-transform: uppercase;
 			color: $black;
@@ -124,7 +140,7 @@ html {
 			}
 		}
 		.headings {
-			border-top: 8px solid $purple;
+			border-top: 8px solid $bmw-blue;
 			width: 100%;
 			text-align: center;
 			padding-top: 60px;
