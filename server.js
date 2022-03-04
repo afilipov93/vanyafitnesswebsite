@@ -24,7 +24,7 @@ app.use('/sendemailpromotion', require('./routes/sendEmailPromotion'));
 // POST email contact
 app.use('/sendemail', require('./routes/sendEmail'));
 
-app.use('/static/', express.static(path.join(__dirname + '/client/public')));
+app.use(express.static(__dirname + '/client/public/'));
 
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname + '/client/build/index.html'));
