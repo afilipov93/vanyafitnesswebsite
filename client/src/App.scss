@@ -1,22 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import 'scss/mixins.scss';
 @import 'scss/libary.scss';
-@import url('//db.onlinewebfonts.com/c/9a6ca307808e5b7ff1efe983307e39d0?family=Quick+Kiss+Personal+Use');
 
 // custom fonts
 @font-face {
-	font-family: 'Quick Kiss Personal Use';
-	src: url('//db.onlinewebfonts.com/t/9a6ca307808e5b7ff1efe983307e39d0.eot');
-	src: url('//db.onlinewebfonts.com/t/9a6ca307808e5b7ff1efe983307e39d0.eot?#iefix')
-			format('embedded-opentype'),
-		url('//db.onlinewebfonts.com/t/9a6ca307808e5b7ff1efe983307e39d0.woff2')
-			format('woff2'),
-		url('//db.onlinewebfonts.com/t/9a6ca307808e5b7ff1efe983307e39d0.woff')
-			format('woff'),
-		url('//db.onlinewebfonts.com/t/9a6ca307808e5b7ff1efe983307e39d0.ttf')
-			format('truetype'),
-		url('//db.onlinewebfonts.com/t/9a6ca307808e5b7ff1efe983307e39d0.svg#Quick Kiss Personal Use')
-			format('svg');
+	font-family: 'Quick Kiss';
+	src: url('./font/Quick-Kiss.ttf'), url('./font/Quick-Kiss.woff2'),
+		url('./font/Quick-Kiss.otf'), url('./font/Quick-Kiss.woff');
 }
 
 * {

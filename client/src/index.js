@@ -5,6 +5,11 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { CookiesProvider } from 'react-cookie';
 
+import './font/Quick-Kiss.otf';
+import './font/Quick-Kiss.woff';
+import './font/Quick-Kiss.woff2';
+import './font/Quick-Kiss.ttf';
+
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
