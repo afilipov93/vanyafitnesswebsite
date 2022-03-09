@@ -5,8 +5,7 @@ class Logo extends React.Component {
 		return (
 			<div className="logo">
 				<a href="/">
-					<h3>{this.props.content.title}</h3>
-					{/* <img src={this.props.content.src} alt={this.props.content.alt} /> */}
+					<img src={this.props.content.src} alt={this.props.content.alt} />
 				</a>
 			</div>
 		);

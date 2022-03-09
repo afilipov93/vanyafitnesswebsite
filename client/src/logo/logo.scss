@@ -1,24 +1,16 @@
-// $width: 300px;
+$width: 300px;
 
 html body .logo {
-	h3 {
-		font-family: 'Quick Kiss';
-		font-size: 3rem;
-		color: white;
+	max-width: $width;
+	display: flex;
+	align-items: center;
+	img {
+		width: 200px;
+		filter: invert(100%);
+
 		@include breakpoint(phablet) {
-			color: $black;
-			font-size: 5rem;
+			width: $width;
+			filter: invert(0%);
 		}
 	}
-	// max-width: $width;
-	// display: flex;
-	// align-items: center;
-	// img {
-	// 	width: $width;
-	// 	filter: invert(100%);
-
-	// 	@include breakpoint(phablet) {
-	// 		filter: invert(0%);
-	// 	}
-	// }
 }
