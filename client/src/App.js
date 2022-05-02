@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import {
 	Switch,
 	Route,
@@ -8,93 +8,28 @@ import {
 } from 'react-router-dom';
 
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
-import Header from './header/header';
-import Home from './home/home';
-import About from './about/about';
-import Contact from './contact/contact';
-import RepMaxCalculator from './rep-max-calculator/rep-max-calculator';
-import Footer from './footer/footer';
-import Lessons from './lessons/lessons';
-import Discount from './discount/discount';
+import Home from './Home/Home';
 
-import './App.scss';
+import './App.css';
+import MainNavigation from './Heading/MainNavigation/MainNavigation';
 
-library.add(fab);
+library.add(fab, faAngleUp);
 
-class App extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = { response: '', loading: true };
-	}
-
-	componentDidMount() {
-		this.getData();
-	}
-
-	getData = () => {
-		fetch('/data')
-			.then((res) => res.json())
-			.then((data) => this.setState({ response: data, loading: false }));
-	};
-	render() {
-		if (this.state.loading) {
-			return <div>Loading</div>;
-		}
-		return (
+const App = () => {
+	return (
+		<Fragment>
+			<MainNavigation />
 			<Router>
-				<Header data={this.state.response.websiteContentData} />
 				<Switch>
-					<Route
-						exact
-						path="/"
-						render={(props) => (
-							<Home {...props} data={this.state.response.websiteContentData} />
-						)}
-					/>
-					<Route
-						path="/over"
-						render={(props) => (
-							<About {...props} data={this.state.response.websiteContentData} />
-						)}
-					/>
-					<Route
-						path="/contact"
-						render={(props) => (
-							<Contact
-								{...props}
-								data={this.state.response.websiteContentData}
-							/>
-						)}
-					/>
-					<Route
-						path="/lessen"
-						render={(props) => (
-							<Lessons
-								{...props}
-								data={this.state.response.websiteContentData}
-							/>
-						)}
-					/>
-					<Route path="/max-rep-calculator">
-						<RepMaxCalculator />
-					</Route>
-					<Route
-						path="/actie"
-						render={(props) => (
-							<Discount
-								{...props}
-								data={this.state.response.websiteContentData}
-							/>
-						)}
-					/>
+					<Route exact path="/" render={() => <Home />} />
 					<Redirect to="/" />
 				</Switch>
-				<Footer data={this.state.response.websiteContentData} />
 			</Router>
-		);
-	}
-}
+		</Fragment>
+	);
+};
 
 export default withRouter(App);

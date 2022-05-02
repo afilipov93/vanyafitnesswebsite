@@ -1,0 +1,80 @@
+/* @import 'scss/mixins.css'; */
+/* @import 'scss/libary.css'; */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+/* custom fonts */
+/* @font-face {
+ 	font-family: 'Quick-Kiss';
+ 	src: url('./scss/font/Quick-Kiss.eot') format('truetype'),
+ 		url('./scss/font/Quick-Kiss.woff2') format('woff'),
+ 		url('./scss/font/Quick-Kiss.otf'),
+ 		url('./scss/font/Quick-Kiss.woff') format('woff'),
+ 		url('./scss/font/Quick-Kiss.svg#QuickKiss') format(svg);
+ } */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+::selection {
+	/* background: $pink; */
+}
+html {
+	font-size: 62.5%;
+	font-family: 'Quicksand', sans-serif;
+	color: white;
+	background: rgba(24, 29, 27, 1);
+}
+p {
+	font-size: 1.4rem;
+	line-height: 1.5;
+}
+ul li {
+	font-size: 1.4rem;
+	line-height: 1.5;
+}
+.slide-in-left-enter {
+	transform: translateX(-100%);
+}
+
+.slide-in-left-enter-active {
+	transform: translateX(0);
+	opacity: 1;
+	transition: all 200ms;
+}
+
+.slide-in-left-exit {
+	transform: translateX(0%);
+	opacity: 1;
+}
+
+.slide-in-left-exit-active {
+	transform: translateX(-100%);
+	opacity: 0;
+	transition: all 200ms;
+}
+.title-container__fullwidth {
+	font-size: 3.5rem;
+	font-weight: 800;
+	padding: 1rem;
+}
+.title__fullwidth::after {
+	content: '\00a0';
+	display: block;
+	width: 100%;
+	height: 4px;
+	background-color: #045de9;
+	background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+}
+
+h2 strong {
+	font-size: 8rem;
+}
+blockquote {
+	font-size: 2rem;
+}
+blockquote::before,
+blockquote::after {
+	content: '"';
+}
