@@ -3,71 +3,92 @@ import React from 'react';
 import './Home.scss';
 import ContentBlock from '../components/ContentBlock/ContentBlock';
 import Dropdown from '../components/Dropdown/Dropdown';
-import HorizontalItems from '../components/HorizontalItems/HorizontalItems';
+import Packages from '../components/Packages/Packages';
+import { Steps, StepsContainer } from '../components/Steps/Steps';
 
 const packages = [
 	{
-		packages: [
+		id: Math.random(),
+		title: 'Light focus',
+		services: [
 			{
-				id: Math.random(),
-				title: 'Light focus',
-				services: [
-					'1x 60 min personal training',
-					'Privé trainingsruimte',
-					'Op maat gemaakt schema',
-					'2x optie tot verzetten',
-				],
-				price: 480,
-			},
-			{
-				id: Math.random(),
-				title: 'Fair focus',
-				services: [
-					'2x 60 min personal training',
-					'Privé trainingsruimte',
-					'Op maat gemaakt schema',
-					'Voedingstips',
-					'Planning',
-					'1RM test',
-					'Verzetten tot 24 uur voor de training',
-				],
-				price: 1120,
-			},
-			{
-				id: Math.random(),
-				title: 'Total focus',
-				services: [
-					'2x 60 min personal training',
-					'Privé trainingsruimte',
-					'Op maat gemaakt schema',
-					'Berekening van energiebehoefte en eetschema',
-					'Planning',
-					'1RM test',
-					'Verzetten tot 12 uur voor de training',
-					'Tussentijdse-evaluatie',
-				],
-				price: 1280,
-			},
-			,
-			{
-				id: Math.random(),
-				title: 'Hyper focus',
-				services: [
-					'2x 90 min personal training',
-					'Privé trainingsruimte',
-					'Op maat gemaakt schema',
-					'Online voedingsdagboek',
-					'Uitgebreide trainingsplanning',
-					'1RM test',
-					'Verzetten tot 1 uur voor de training',
-					'Tussentijdse-evaluatie',
-					'15 min bijpraten of vragen stellen',
-					'24/7 vragen stellen via whatsapp',
-					'Sporthanddoek met je eigen naam',
-				],
-				price: 1440,
+				interval: 1,
+				duration: 60,
+				location: 'Privé trainingsruimte',
+				schema: 'Op maat gemaakt schema',
+				reschedule: '2x optie tot verzetten',
+				tests: '',
+				planning: '',
+				evaluation: '',
+				timeAroundTraining: '',
+				whatsapp: '',
+				merchandise: '',
 			},
 		],
+		price: 480,
+	},
+	{
+		id: Math.random(),
+		title: 'Fair focus',
+		services: [
+			{
+				interval: 2,
+				duration: 60,
+				location: 'Privé trainingsruimte',
+				schema: 'Op maat gemaakt schema',
+				reschedule: 'Verzetten tot 24 uur voor de training',
+				nutrition: 'Voedingstips',
+				tests: '1RM test',
+				planning: 'Trainingsplanning',
+				evaluation: '',
+				timeAroundTraining: '',
+				whatsapp: '',
+				merchandise: '',
+			},
+		],
+		price: 1120,
+	},
+	{
+		id: Math.random(),
+		title: 'Total focus',
+		services: [
+			{
+				interval: 2,
+				duration: 60,
+				location: 'Privé trainingsruimte',
+				schema: 'Op maat gemaakt schema',
+				reschedule: 'Verzetten tot 12 uur voor de training',
+				nutrition: 'Berekening van energiebehoefte en eetschema',
+				tests: '1RM test',
+				planning: 'Trainingsplanning',
+				evaluation: 'Tussentijdse-evaluatie',
+				timeAroundTraining: '',
+				whatsapp: '',
+				merchandise: '',
+			},
+		],
+		price: 1280,
+	},
+	{
+		id: Math.random(),
+		title: 'Hyper focus',
+		services: [
+			{
+				interval: 2,
+				duration: 90,
+				location: 'Privé trainingsruimte',
+				schema: 'Op maat gemaakt schema',
+				reschedule: 'Verzetten tot 2 uur voor de training',
+				nutrition: 'Online voedingsdagboek',
+				tests: '1RM test, test specifiek voor behalen doelen',
+				planning: 'Uitgebreide trainingsplanning',
+				evaluation: '4 weekse-evaluatie',
+				timeAroundTraining: '15 min bijpraten of vragen stellen',
+				whatsapp: '24/7 vragen stellen via whatsapp',
+				merchandise: 'Sporthanddoek met je eigen naam',
+			},
+		],
+		price: 1440,
 	},
 ];
 
@@ -87,7 +108,9 @@ const Home = () => {
 			</ContentBlock>
 			<ContentBlock backgroundImage="/SMALL/1V0A4435.jpg">
 				<div className="title-container__fullwidth">
-					<h3 className="title__fullwidth">COMMITMENT</h3>
+					<article>
+						<h3 className="title__fullwidth">COMMITMENT</h3>
+					</article>
 				</div>
 			</ContentBlock>
 			<ContentBlock>
@@ -174,7 +197,49 @@ const Home = () => {
 				</Dropdown>
 			</ContentBlock>
 			<ContentBlock>
-				<HorizontalItems items={packages} />
+				<h2>Pakketten</h2>
+				<p>
+					Minimale afname is 2 maanden. Om echt veranderingen te zien is 2
+					maanden commitment nodig van jou. Voor minder doen we het niet.
+					Onderstaande prijzen zijn op deze gedachte gebasseerd.
+				</p>
+				<div className="packages-container">
+					<Packages items={packages} />
+				</div>
+			</ContentBlock>
+			<ContentBlock>
+				<StepsContainer>
+					<Steps count="1" border={true}>
+						<h3>Neem contact op</h3>
+						<p>We prikken een datum voor je intake</p>
+					</Steps>
+					<Steps count="2">
+						<h3>De intake</h3>
+						<p>
+							We gaan het hebben over jouw doelen en wensen en hoe we ons daar
+							het beste op kunnen foccusen. Ook doen we een test om te kijken
+							hoe je beweegt en waar we naar moeten kijken. Daarna ga ik aan de
+							slag om je wensen om te zetten in een perfect passend
+							trainingschema
+						</p>
+					</Steps>
+					<Steps count="3">
+						<h3>De training</h3>
+						<p>
+							Hier gaan we jouw op maat gemaakte schema trainen! Ik laat je zien
+							hoe je dingen moet doen, en waarom ik wil dat je ze doet. Je mag
+							alles aan me vragen en na afloop gaan we praten wat je ervan vond.
+						</p>
+					</Steps>
+					<Steps count="4" border={true}>
+						<h3>Het plan</h3>
+						<p>
+							Als dit je allemaal aanspreekt en je net zoveel energie hebt om
+							dit te gaan doen als ik. Dan gaan we ons samen 100% focussen om je
+							doelen te halen.
+						</p>
+					</Steps>
+				</StepsContainer>
 			</ContentBlock>
 		</React.Fragment>
 	);

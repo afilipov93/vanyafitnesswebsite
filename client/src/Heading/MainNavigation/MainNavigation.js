@@ -33,7 +33,12 @@ const MainNavigation = () => {
 					<span />
 				</button>
 				<h1 className="main-navigation__title">
-					<Link to="/"></Link>
+					<Link to="/">
+						<img
+							src="/SMALL/focused-logo-clean.svg"
+							alt="Focused Personal Training by Michael Post"
+						/>
+					</Link>
 				</h1>
 				<nav className="main-navigation__header-nav">
 					<NavLinks />

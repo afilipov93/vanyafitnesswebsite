@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 160" style="enable-background:new 0 0 200 160;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:url(#SVGID_1_);}
+	.st2{filter:url(#Adobe_OpacityMaskFilter);}
+	.st3{mask:url(#SVGID_00000163043529511706853350000005918987326541215370_);fill:#181D1B;}
+</style>
+<g id="Layer_3" class="st0">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="50" y1="80" x2="150" y2="80">
+		<stop  offset="0" style="stop-color:#0000FF"/>
+		<stop  offset="1" style="stop-color:#FF00FF"/>
+	</linearGradient>
+	<rect x="50" y="40" class="st1" width="100" height="80"/>
+</g>
+<g id="Layer_1">
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="200" height="160">
+			<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+			<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
+		</filter>
+	</defs>
+	
+		<mask maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="160" id="SVGID_00000046336638888492842320000003962973098155095741_">
+		<g class="st2">
+			<path d="M200,66v28h-41.7c-6.3,26.4-30,46-58.3,46s-52-19.6-58.3-46H0V66h41.7c6.3-26.4,30-46,58.3-46s52,19.6,58.3,46H200z"/>
+		</g>
+	</mask>
+	<rect style="mask:url(#SVGID_00000046336638888492842320000003962973098155095741_);fill:#181D1B;" width="200" height="160"/>
+	<path class="st0" d="M150,73v14h-20.8c-3.1,13.2-15,23-29.2,23s-26-9.8-29.2-23H50V73h20.8c3.1-13.2,15-23,29.2-23s26,9.8,29.2,23
+		H150z"/>
+</g>
+</svg>

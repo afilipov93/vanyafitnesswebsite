@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import { faAngleUp, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 import Home from './Home/Home';
@@ -16,7 +16,7 @@ import Home from './Home/Home';
 import './App.css';
 import MainNavigation from './Heading/MainNavigation/MainNavigation';
 
-library.add(fab, faAngleUp);
+library.add(fab, faAngleUp, faTimes);
 
 const App = () => {
 	return (

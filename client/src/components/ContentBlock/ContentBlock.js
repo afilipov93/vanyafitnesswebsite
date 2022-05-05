@@ -6,7 +6,9 @@ const ContentBlock = (props) => {
 	return (
 		<section
 			className={
-				props.backgroundImage ? 'wrapper wrapper__backgroundImage' : 'wrapper'
+				props.backgroundImage
+					? `wrapper wrapper__backgroundImage ${props.className || ''}`
+					: `wrapper ${props.className || ''}`
 			}
 			style={
 				props.backgroundImage
