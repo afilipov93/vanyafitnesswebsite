@@ -115,7 +115,7 @@ const Home = () => {
 			</ContentBlock>
 			<ContentBlock>
 				<blockquote>
-					Jij committeert je aan jouw doelen. En committeer me aan jouw.
+					Jij committeert je aan jouw doelen en ik committeer me aan jou.
 				</blockquote>
 			</ContentBlock>
 			<ContentBlock>
@@ -130,13 +130,13 @@ const Home = () => {
 				</p>
 
 				<p>
-					Zodat jij je doelen op de allerbeste manier haalt. En je zal ervaren
-					dat je altijd net iets meer kunt, dan je denkt.
+					Zodat jij je doelen op de allerbeste manier haalt en je zal ervaren
+					dat je altijd net iets meer kunt dan je denkt.
 				</p>
 
 				<p>
-					Zie je jouw doel voor je, én alvast je volgende doel. Want dankzij
-					jouw focus en commitment stijg jij binnen. No time boven jezelf uit.
+					Zie jouw doel voor je én alvast je volgende doel. Want dankzij jouw
+					focus en commitment stijg jij binnen no time boven jezelf uit.
 					Beloofd.
 				</p>
 			</ContentBlock>
@@ -144,17 +144,17 @@ const Home = () => {
 				<Dropdown title="Je krijgt de zorg van een docent en de kennis van een pro.">
 					<ul>
 						<li>
-							van persoonlijke communicatie tot een parkeren voor de deur en
+							van persoonlijke communicatie tot een parkeerplek voor de deur en
 							trainen in een privé ruimte. Ik zorg dat jij je op alle fronten
 							vol kan focussen op jouw doelen.
 						</li>
 						<li>
-							De beste docent geeft je een gevoel van vertrouwen. En zorgt dat
+							De beste docent geeft je een gevoel van vertrouwen en zorgt dat
 							jij veilig bent.
 						</li>
 						<li>
 							Ik draag mijn kennis zo over dat je echt begrijpt waarom en wat je
-							traint. Daarmee houd je je commitment langer vast
+							traint. Daarmee houd je je commitment langer vast.
 						</li>
 					</ul>
 				</Dropdown>
@@ -163,8 +163,8 @@ const Home = () => {
 						<li>
 							Ik geniet ervan als mijn trainees verbaasd zijn over wat ze zelf
 							kunnen. Een gewicht optillen waarvan gedacht werd dat het
-							onmogelijk was, of juist iets veel simpelers als weer balanceren
-							op 1 been.
+							onmogelijk was of juist iets veel simpelers als weer balanceren op
+							1 been.
 						</li>
 						<li>
 							Juist door persoonlijk en op maat te trainen bescherm je jezelf
@@ -172,26 +172,26 @@ const Home = () => {
 							sportschool hebt.
 						</li>
 						<li>
-							Door met mij samen te werken, zie jij scherp wat je straks kan.
+							Door met mij samen te werken zie jij scherp wat je straks kan.
 						</li>
 					</ul>
 				</Dropdown>
-				<Dropdown title="Jij committeert je aan jouw doelen, en ik committeer me aan jou.">
+				<Dropdown title="Jij committeert je aan jouw doelen en ik committeer me aan jou.">
 					<ul>
 						<li>
 							We werken altijd vanuit de waarom. Dit is de grootste basis voor
-							jouw commitment
+							jouw commitment.
 						</li>
 						<li>
-							Sporters mogen veel eisen van hun coach. En jij dus ook van mij.
-							Het is jouw lijf en jouw gezondheid, die staan op #1
+							Sporters mogen veel eisen van de coach. En jij dus ook van mij.
+							Het is jouw lijf en jouw gezondheid, die staan op #1.
 						</li>
 						<li>
 							Waar jij nu ook bent qua fitheid, je boekt altijd progressie.
 						</li>
 						<li>
 							Ik luister naar wat je zegt en doe daar wat mee. Feedback is
-							belangrijk zeker als jouw motivatie daardoor groeit.{' '}
+							belangrijk zeker als jouw motivatie daardoor groeit.
 						</li>
 					</ul>
 				</Dropdown>
@@ -199,9 +199,9 @@ const Home = () => {
 			<ContentBlock>
 				<h2>Pakketten</h2>
 				<p>
-					Minimale afname is 2 maanden. Om echt veranderingen te zien is 2
-					maanden commitment nodig van jou. Voor minder doen we het niet.
-					Onderstaande prijzen zijn op deze gedachte gebasseerd.
+					Om echt veranderingen te zien is 2 maanden commitment nodig van jou,
+					voor minder doen we het niet. Onderstaande prijzen zijn op deze
+					gedachte gebasseerd.
 				</p>
 				<div className="packages-container">
 					<Packages items={packages} />
@@ -218,24 +218,24 @@ const Home = () => {
 						<p>
 							We gaan het hebben over jouw doelen en wensen en hoe we ons daar
 							het beste op kunnen foccusen. Ook doen we een test om te kijken
-							hoe je beweegt en waar we naar moeten kijken. Daarna ga ik aan de
+							hoe je beweegt en waar we naar moeten letten. Daarna ga ik aan de
 							slag om je wensen om te zetten in een perfect passend
-							trainingschema
+							trainingschema.
 						</p>
 					</Steps>
 					<Steps count="3">
 						<h3>De training</h3>
 						<p>
 							Hier gaan we jouw op maat gemaakte schema trainen! Ik laat je zien
-							hoe je dingen moet doen, en waarom ik wil dat je ze doet. Je mag
-							alles aan me vragen en na afloop gaan we praten wat je ervan vond.
+							hoe je de oefeningen uitvoert en waarom. Je mag alles aan me
+							vragen en na afloop evalueren we de training.
 						</p>
 					</Steps>
 					<Steps count="4" border={true}>
 						<h3>Het plan</h3>
 						<p>
 							Als dit je allemaal aanspreekt en je net zoveel energie hebt om
-							dit te gaan doen als ik. Dan gaan we ons samen 100% focussen om je
+							dit te gaan doen als ik dan gaan we ons samen 100% focussen om je
 							doelen te halen.
 						</p>
 					</Steps>
