@@ -2,7 +2,7 @@
 	"name": "michaelpostpt",
 	"version": "0.1.0",
 	"engines": {
-		"node": "14.18.1"
+		"node": "16.x"
 	},
 	"homepage": ".",
 	"proxy": "http://localhost:3001",
