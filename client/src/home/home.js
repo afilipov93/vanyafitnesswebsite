@@ -1,6 +1,5 @@
 import React from 'react';
 
-import './Home.scss';
 import ContentBlock from '../components/ContentBlock/ContentBlock';
 import Dropdown from '../components/Dropdown/Dropdown';
 import Packages from '../components/Packages/Packages';
