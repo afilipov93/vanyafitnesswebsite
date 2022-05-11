@@ -85,3 +85,14 @@
 	font-size: 2rem;
 	height: 5.4rem;
 }
+@media (min-width: 600px) {
+	.steps-viewport {
+		width: 100%;
+		overflow: hidden;
+		overflow-x: scroll;
+	}
+	.step-container {
+		min-width: auto;
+		width: 45%;
+	}
+}

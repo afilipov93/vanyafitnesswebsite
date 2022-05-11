@@ -26,13 +26,8 @@ html {
 	color: white;
 	background: rgba(24, 29, 27, 1);
 }
-p {
+body {
 	font-size: 1.4rem;
-	line-height: 1.5;
-}
-ul li {
-	font-size: 1.4rem;
-	line-height: 1.5;
 }
 .slide-in-left-enter {
 	transform: translateX(-100%);
@@ -54,11 +49,7 @@ ul li {
 	opacity: 0;
 	transition: all 200ms;
 }
-.title-container__fullwidth {
-	font-size: 3.5rem;
-	font-weight: 800;
-	text-align: center;
-}
+
 .title__fullwidth::after {
 	content: '\00a0';
 	display: block;
@@ -66,17 +57,32 @@ ul li {
 	background-color: #045de9;
 	background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
 }
+.modal-enter {
+	transform: scale(0.8);
+	opacity: 0;
+	z-index: -1;
+}
 
-h2 strong {
-	font-size: 8rem;
+.modal-enter-active {
+	transform: scale(1);
+	opacity: 1;
+	z-index: 15;
+	transition: all 200ms;
 }
-blockquote {
-	font-size: 2rem;
+
+.modal-exit {
+	transform: scale(1);
+	opacity: 1;
+	z-index: 15;
 }
-blockquote::before,
-blockquote::after {
-	content: '"';
+
+.modal-exit-active {
+	transform: scale(0.8);
+	opacity: 0;
+	z-index: -1;
+	transition: all 200ms;
 }
+
 .card {
 	width: calc(49% - 6rem);
 	margin: 1rem;
@@ -109,4 +115,22 @@ blockquote::after {
 	text-align: center;
 	font-weight: bold;
 	margin-bottom: 1.4rem;
+}
+.card__CTA {
+	margin: 1rem auto;
+}
+
+@media (min-width: 600px) {
+	.inline-grid__desktop {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+		grid-auto-rows: 1fr;
+	}
+	.inline-grid__desktop > * {
+		align-self: stretch;
+	}
+	body {
+		font-size: 2rem;
+	}
 }

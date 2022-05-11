@@ -1,15 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
-const ContactForm = ({ title }) => {
+import './ContactForm.css';
+import Button from './Button/Button';
+
+const ContactForm = (props) => {
 	const {
 		register,
 		formState: { errors },
 		reset,
 		handleSubmit,
-	} = useForm();
+	} = useForm({
+		defaultValues: {
+			package: props.package || '',
+		},
+	});
 	const [feedback, setFeedback] = useState('Verstuur');
+
+	useEffect(() => {
+		return () => props.cleanup();
+	});
 
 	const onSubmitHandler = async (data, event) => {
 		setFeedback('Verzenden...');
@@ -36,16 +47,22 @@ const ContactForm = ({ title }) => {
 				onSubmit={handleSubmit(onSubmitHandler, onError)}
 			>
 				<div className="row">
-					<p>{title}</p>
-				</div>
-				<div className="row">
 					<input
 						type="text"
 						name="name"
 						className={errors.name ? 'input error' : 'input'}
-						placeholder="Je naam"
+						placeholder="Voornaam"
 						{...register('name', { required: true, minLength: 3 })}
 					/>
+					<input
+						type="text"
+						name="surname"
+						className={errors.surname ? 'input error' : 'input'}
+						placeholder="Achternaam"
+						{...register('surname', { required: true, minLength: 3 })}
+					/>
+				</div>
+				<div className="row">
 					<input
 						type="tel"
 						name="phone"
@@ -66,13 +83,26 @@ const ContactForm = ({ title }) => {
 					/>
 				</div>
 				<div className="row">
+					<select
+						{...register('package', {
+							required: false,
+						})}
+					>
+						<option value="">Kies Pakket</option>
+						<option value="light-focus">Light focus</option>
+						<option value="fair-focus">Fair focus</option>
+						<option value="total-focus">Total focus</option>
+						<option value="hyper-focus">Hyper focus</option>
+					</select>
+				</div>
+				<div className="row">
 					<textarea
 						rows={6}
 						name="message"
 						className={
 							errors.message ? 'input textarea error' : 'input textarea'
 						}
-						placeholder="Bericht"
+						placeholder="Omschrijf kort je wens"
 						{...register('message', { required: true })}
 					/>
 				</div>
@@ -84,9 +114,9 @@ const ContactForm = ({ title }) => {
 					</div>
 				)}
 				<div className="row">
-					<button className="button primair" type="submit">
+					<Button secondair type="submit">
 						{feedback}
-					</button>
+					</Button>
 				</div>
 			</form>
 		</div>

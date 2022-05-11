@@ -26,10 +26,11 @@ sendEmailRouter.post('/', (req, res, next) => {
 		subject: 'Contact formulier ingevuld',
 		html: `
 		<h1>Nieuwe aanmelding via het contactformulier</h1>
-		<p>Naam: ${req.body.data.name}</p>
+		<p>Naam: ${req.body.data.name} ${req.body.data.surname}</p>
 		<p>Telefoon: ${req.body.data.phone}</p>
 		<p>E-mail: ${req.body.data.email}</p>
-    <p>Bericht: <i>${req.body.data.message}</i></p>
+		<p>Pakket: ${req.body.data.package}</p>
+    <p>Doel: <i>${req.body.data.message}</i></p>
 		`,
 	};
 	const messageSender = {
@@ -39,10 +40,11 @@ sendEmailRouter.post('/', (req, res, next) => {
 		html: `
 		<h1>Aanmelding gelukt!</h1>
 		<p>Leuk dat je met mij in contact wil komen. Ik neem zo snel mogelijk contact met je op om een afspraak te plannen. Dit zijn de gegevens die naar mij toe hebt gestuurd:</p>
-		<p>Naam: ${req.body.data.name}</p>
+		<p>Naam: ${req.body.data.name} ${req.body.data.surname}</p>
 		<p>Telefoon: ${req.body.data.phone}</p>
 		<p>E-mail: ${req.body.data.email}</p>
-    <p>Bericht: <i>${req.body.data.message}</i></p>
+		<p>Pakket: ${req.body.data.package}</p>
+    <p>Doel: <i>${req.body.data.message}</i></p>
 		<p>Klopt er iets niet? Vul dan het formulier op de website nog een keer in.</p>
 		<p>Met sportieve groet,<br>Michael Post</p>
 		`,

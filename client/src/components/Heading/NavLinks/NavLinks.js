@@ -5,7 +5,7 @@ import './NavLinks.scss';
 
 const NavLinks = () => {
 	return (
-		<ul>
+		<ul className="nav-links">
 			<li>
 				<NavLink exact to="/">
 					Home

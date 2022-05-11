@@ -1,0 +1,36 @@
+form input,
+form textarea,
+form select {
+	padding: 1rem;
+	font-family: inherit;
+	font-size: inherit;
+	background: black;
+	border: 0;
+	border-bottom: 3px solid white;
+	margin: 1rem 0;
+	color: white;
+	display: block;
+	width: calc(100% - 2rem);
+	transition: all 0.2s ease-in-out;
+}
+form select {
+	width: 100%;
+}
+form input:focus,
+form textarea:focus,
+form select:focus,
+form input:active,
+form textarea:active,
+form select:active {
+	padding: 1rem;
+	border: 0;
+	border-bottom: 3px solid #045de9;
+	outline: none;
+	transition: all 0.2s ease-in-out;
+}
+
+form .row {
+	display: block;
+}
+@media (min-width: 600px) {
+}

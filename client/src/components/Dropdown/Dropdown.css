@@ -32,6 +32,8 @@
 	align-items: center;
 	margin: 2px;
 	border-radius: 2px;
+	width: calc(100% - 4px);
+	height: calc(100% - 4.4rem);
 }
 .title-container .title-content svg {
 	font-size: 2rem;
@@ -40,14 +42,18 @@
 .dropdown-content-container ul {
 	margin: 0 2rem;
 }
-.dropdown-content-container ul li {
-}
 .dropdown-content-container ul li::marker {
 	color: #09c6f9;
 	background-color: #045de9;
 }
 .dropdown-content-container ul li + li {
 	margin-top: 1.4rem;
+}
+
+@media (min-width: 600px) {
+	.title-container {
+		margin: 2rem;
+	}
 }
 
 /*

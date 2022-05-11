@@ -1,0 +1,29 @@
+.activation-wrapper {
+	max-width: 90rem;
+	margin: auto;
+}
+.activation-container {
+	background-color: #045de9;
+	background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+	padding: 3px;
+}
+.activation-container button {
+	margin: 2.4rem auto 0;
+}
+.activation-content {
+	background: rgba(24, 29, 27, 1);
+	padding: 2rem 2.4rem;
+}
+@media (min-width: 600px) {
+	.activation-wrapper {
+		margin: 2.4rem auto;
+	}
+	.activation-content {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-evenly;
+	}
+	.activation-container button {
+		margin: 0;
+	}
+}

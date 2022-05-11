@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Heading from '../Heading';
-import Backdrop from '../../components/Backdrop/Backdrop';
-import SideDrawer from '../../components/SideDrawer/SideDrawer';
+import Backdrop from '../../Backdrop/Backdrop';
+import SideDrawer from '../../SideDrawer/SideDrawer';
 import NavLinks from '../NavLinks/NavLinks';
 
 import './MainNavigation.scss';
+import Button from '../../Button/Button';
 
-const MainNavigation = () => {
+const MainNavigation = (props) => {
 	const [drawerIsOpen, setDrawerIsOpen] = useState(false);
 
 	const toggleDrawerHandler = () => {
@@ -43,6 +44,11 @@ const MainNavigation = () => {
 				<nav className="main-navigation__header-nav">
 					<NavLinks />
 				</nav>
+				<div className="main-navigation__CTA">
+					<Button secondair onClick={props.modalHandler}>
+						Start nu
+					</Button>
+				</div>
 			</Heading>
 		</React.Fragment>
 	);

@@ -1,0 +1,39 @@
+.modal-wrapper {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 15;
+}
+.modal {
+	background: rgba(24, 29, 27, 1);
+	margin: 2rem;
+	border: 2px solid white;
+	width: calc(100% - 9rem);
+	max-width: 700px;
+}
+.modal__image {
+	width: 100%;
+	padding-bottom: 75%;
+	background-size: cover;
+}
+
+.modal-content-wrapper {
+	padding: 2.4rem;
+}
+@media (min-width: 600px) {
+	.modal {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.modal-content-wrapper {
+		min-width: 250px;
+	}
+	.modal__image {
+		justify-self: stretch;
+		align-self: stretch;
+		background-position: 50%;
+	}
+}

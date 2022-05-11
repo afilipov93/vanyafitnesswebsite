@@ -1,0 +1,29 @@
+.nav-links * {
+	color: white;
+}
+.nav-links {
+	list-style-type: none;
+}
+.nav-links li {
+	font-size: 3rem;
+	font-weight: bold;
+}
+.nav-links li a {
+	text-decoration: none;
+}
+@media (min-width: 600px) {
+	.nav-links li {
+		font-size: 2rem;
+	}
+	.nav-links li a {
+		position: relative;
+	}
+	.nav-links li a.active::after {
+		content: '';
+		display: block;
+		height: 2px;
+		margin: auto;
+		width: calc(100% - 1rem);
+		background: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+	}
+}
