@@ -1,0 +1,37 @@
+.outcome-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+form {
+	margin: 2rem -2.4rem;
+}
+.outcome__title,
+.outcome__content div {
+	display: flex;
+	padding: 1rem 2.4rem;
+}
+.outcome__title p + p,
+.outcome__content p + p {
+	margin-top: 0;
+	margin-left: 2.4rem;
+}
+.outcome__content p:first-child {
+	width: 5rem;
+}
+.outcome__content div:nth-child(odd) {
+	background: black;
+}
+.outcome__content div.outcome__title {
+	background: rgba(24, 29, 27, 1);
+	border-bottom: 1px solid white;
+	font-weight: bold;
+}
+.outcome__quote {
+	font-size: 3rem;
+}
+.outcome__quote h2 span {
+	background: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

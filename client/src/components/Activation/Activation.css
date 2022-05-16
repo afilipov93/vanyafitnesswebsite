@@ -1,6 +1,9 @@
 .activation-wrapper {
-	max-width: 90rem;
+	max-width: 900px;
 	margin: auto;
+	position: relative;
+	z-index: 6;
+	width: 100%;
 }
 .activation-container {
 	background-color: #045de9;
@@ -17,6 +20,9 @@
 @media (min-width: 600px) {
 	.activation-wrapper {
 		margin: 2.4rem auto;
+	}
+	.activation-container {
+		width: 800px;
 	}
 	.activation-content {
 		display: flex;

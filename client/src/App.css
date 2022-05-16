@@ -28,6 +28,7 @@ html {
 }
 body {
 	font-size: 1.4rem;
+	background: rgba(24, 29, 27, 1);
 }
 .slide-in-left-enter {
 	transform: translateX(-100%);
@@ -119,6 +120,9 @@ body {
 .card__CTA {
 	margin: 1rem auto;
 }
+.card__CTA .btn.secondair {
+	padding: 1rem 0.5rem;
+}
 
 @media (min-width: 600px) {
 	.inline-grid__desktop {
@@ -132,5 +136,8 @@ body {
 	}
 	body {
 		font-size: 2rem;
+	}
+	.card__CTA .btn.secondair {
+		padding: 1rem 4rem;
 	}
 }

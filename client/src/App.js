@@ -2,7 +2,6 @@ import React, { Fragment, useState } from 'react';
 import {
 	Switch,
 	Route,
-	withRouter,
 	BrowserRouter as Router,
 	Redirect,
 } from 'react-router-dom';
@@ -17,6 +16,8 @@ import MainNavigation from './components/Heading/MainNavigation/MainNavigation';
 import Home from './Home/Home';
 import Modal from './components/Modal/Modal';
 import ContactForm from './components/ContactForm';
+import RepMaxCalculator from './RepMaxCalculator/RepMaxCalculator';
+import Footer from './components/Footer/Footer';
 
 library.add(fab, faAngleUp, faXmark);
 
@@ -35,8 +36,8 @@ const App = () => {
 	};
 	return (
 		<Fragment>
-			<MainNavigation modalHandler={() => showModalHandler()} />
 			<Router>
+				<MainNavigation modalHandler={() => showModalHandler()} />
 				<Switch>
 					<Route
 						exact
@@ -48,8 +49,10 @@ const App = () => {
 							/>
 						)}
 					/>
+					<Route path="/calculator" render={() => <RepMaxCalculator />} />
 					<Redirect to="/" />
 				</Switch>
+				<Footer />
 			</Router>
 			<Modal
 				show={showModal}
@@ -63,4 +66,4 @@ const App = () => {
 	);
 };
 
-export default withRouter(App);
+export default App;

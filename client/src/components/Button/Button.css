@@ -5,6 +5,8 @@
 	text-transform: uppercase;
 	display: block;
 	font-size: inherit;
+	filter: brightness(1);
+	transition: filter 0.2s ease-in-out;
 }
 .btn.primair {
 	background: rgba(24, 29, 27, 1);
@@ -21,4 +23,8 @@
 	padding: 1rem 4rem;
 	border: 2px solid #045de9;
 	border-radius: 4px;
+}
+.btn:hover {
+	filter: brightness(1.2);
+	transition: filter 0.2s ease-in-out;
 }

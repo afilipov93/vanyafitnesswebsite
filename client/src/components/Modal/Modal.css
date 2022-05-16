@@ -19,7 +19,9 @@
 	padding-bottom: 75%;
 	background-size: cover;
 }
-
+.modal__content form {
+	margin: 2rem 0;
+}
 .modal-content-wrapper {
 	padding: 2.4rem;
 }

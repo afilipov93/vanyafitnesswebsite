@@ -228,19 +228,18 @@ const Home = (props) => {
 				</div>
 			</ContentBlock>
 			<ContentBlock>
+				<h2>Proefweek</h2>
 				<StepsContainer>
 					<Steps count="1" border={true}>
 						<h3>Neem contact op</h3>
-						<p>We prikken een datum voor je intake</p>
+						<p>We prikken een datum voor je intake.</p>
 					</Steps>
 					<Steps count="2">
 						<h3>De intake</h3>
 						<p>
 							We gaan het hebben over jouw doelen en wensen en hoe we ons daar
-							het beste op kunnen foccusen. Ook doen we een test om te kijken
-							hoe je beweegt en waar we naar moeten letten. Daarna ga ik aan de
-							slag om je wensen om te zetten in een perfect passend
-							trainingschema.
+							het beste op kunnen foccusen. Voor je schema doen we een paar
+							testen zodat ik jouw perfect passende schema kan maken.
 						</p>
 					</Steps>
 					<Steps count="3">
@@ -256,14 +255,14 @@ const Home = (props) => {
 						<p>
 							Als dit je allemaal aanspreekt en je net zoveel energie hebt om
 							dit te gaan doen als ik dan gaan we ons samen 100% focussen om je
-							doelen te halen.
+							doelen te halen en krijg je de kosten van de proefweek terug.
 						</p>
 					</Steps>
 				</StepsContainer>
 			</ContentBlock>
 			<Activation
-				message="Laten we beginnen!"
-				buttonText="Maak contact"
+				message="Proefweek betellen voor &euro;&nbsp;60,-"
+				buttonText="Bestel"
 				onClick={props.modalHandler}
 			/>
 		</React.Fragment>

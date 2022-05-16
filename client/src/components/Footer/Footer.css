@@ -1,0 +1,38 @@
+footer {
+	width: calc(100% - 4.8rem);
+	padding: 2rem 2.4rem;
+	font-size: 1.6rem;
+	background: black;
+	position: fixed;
+	bottom: 0;
+	z-index: 3;
+}
+footer section + section {
+	margin-top: 4.8rem;
+}
+footer section div + div {
+	margin-top: 2rem;
+}
+footer .row {
+	margin-top: 2rem;
+}
+footer .row:first-child {
+	margin-top: 0rem;
+}
+footer a {
+	text-decoration: none;
+	color: white;
+	border-bottom: 1px solid transparent;
+}
+footer a:hover {
+	border-bottom: 1px solid white;
+}
+@media (min-width: 600px) {
+	footer {
+		display: flex;
+		justify-content: space-between;
+	}
+	footer section + section {
+		margin-top: 0rem;
+	}
+}
