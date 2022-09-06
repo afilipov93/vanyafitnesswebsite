@@ -261,7 +261,7 @@ const Home = (props) => {
 				</StepsContainer>
 			</ContentBlock>
 			<Activation
-				message="Proefweek betellen voor &euro;&nbsp;60,-"
+				message="Proefweek bestellen"
 				buttonText="Bestel"
 				onClick={props.modalHandler}
 			/>

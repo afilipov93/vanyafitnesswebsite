@@ -33,9 +33,6 @@ const Card = (props) => {
 	return (
 		<article className="card">
 			<h3 className="card__title">{props.title}</h3>
-			<div className="card__price">
-				&euro;&nbsp;{numbersWithSeperators(props.price)},-
-			</div>
 			<div className="card__CTA">
 				<Button secondair onClick={() => handlePackageSelect(props)}>
 					selecteer
